@@ -1,9 +1,8 @@
 services:
   - type: web
-    name: tecno-cf
+    name: tecno_cf
     env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app
-    runtime: python-3.10.13
-    rootDir: webapp
     plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn webapp.app:app
+    pythonVersion: 3.10.13
